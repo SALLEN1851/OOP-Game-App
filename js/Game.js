@@ -42,3 +42,26 @@ class Game {
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
     }; 
+
+// Checks to see if the button clicked by the player matches a letter in the phrase and then directs the game based on a correct or incorrect guess.
+// Method to handle game interactions
+
+    handleInteraction(button) {
+        let letter = button.innerText;
+
+        if(this.activePhrase.checkLetter(letter)) {
+            button.disabled = true;
+            button.classList.add('chosen');
+            this.activePhrase.showMatchedLetter(letter);
+            
+            if(this.checkForWin()) {
+                this.gameOver(true);
+            };
+        } else {
+            button.classList.add('wrong');
+            if(button.disabled !== true) {
+                button.disabled = true;
+                this.removeLife();
+            };
+        };
+    };
