@@ -60,3 +60,4 @@ class Phrase {
             console.log('After update:', matchedLi.className);
         };
     };
+}; 
