@@ -21,9 +21,14 @@ class Game {
             'I see dead people'
         ];
     console.log('Phrases array:', phrases);
-    };
 
 // Creates an array of Phrase objects using map function.
     const phrasesArray = phraseStrings.map(string => new Phrase(string));
         return phrasesArray;
       };
+
+// Selects random phrase from phrases property
+    getRandomPhrase() {
+        const randomPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)];
+             return randomPhrase;
+    };
