@@ -65,3 +65,19 @@ class Game {
             };
         };
     };
+
+// Increases the value of the missed property, and removes a life from the scoreboard. 
+// JS Method to remove a life from the scoreboard.
+
+    removeLife() {
+        const hearts = document.querySelectorAll('.tries img');
+        hearts[this.missed].src = 'images/lostHeart.png';
+        
+        // ends game once player is out of lives.
+        this.missed += 1; 
+        if(this.missed >= 5) {
+            this.gameOver(false);
+        };
+    };
+
+    
