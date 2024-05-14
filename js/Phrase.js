@@ -37,3 +37,26 @@ class Phrase {
     
         return phrase;
     };
+
+    // Checks to see if the letter selected by the player matches a letter in the phrase
+    checkLetter(letter) {
+        return this.phrase.includes(letter);
+    };
+
+    // Reveals the letter(s) on the board that matches the player's selection
+    showMatchedLetter(letter) {
+        console.log('Letter to match:', letter); 
+
+        const matchingListItems = document.getElementsByClassName(letter);
+        console.log(`Found ${matchingListItems.length} elements with class '${letter}'`);
+    
+        for (let i = 0; i < matchingListItems.length; i++) {
+            let matchedLi = matchingListItems[i];
+            console.log('Before update:', matchedLi.className); 
+    
+            matchedLi.classList.remove('hide');
+            matchedLi.classList.add('show');
+    
+            console.log('After update:', matchedLi.className);
+        };
+    };
