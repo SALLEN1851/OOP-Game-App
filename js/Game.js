@@ -6,9 +6,9 @@
 
 class Game { 
     constructor() {
-        this.missed = 0;
-        this.phrases = this.createPhrases();
-        this.activePhrase = null;
+        this.missed = 0
+        this.phrases = this.createPhrases()
+        this.activePhrase = null
     };
 
 // Creates phrases for use in game
