@@ -80,4 +80,8 @@ class Game {
         };
     };
 
-    
+// Checks for winning move
+checkForWin() {
+    const hiddenLetters = document.querySelectorAll('li.hide');
+    return hiddenLetters.length === 0;
+};
