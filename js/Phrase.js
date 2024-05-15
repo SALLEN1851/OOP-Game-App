@@ -30,7 +30,7 @@ class Phrase {
                 letterLi.className = `hide letter ${letter}`;
                 letterLi.textContent = `${letter}`;
                 console.log('Added letter element:', letterLi); 
-            }
+            };
     
             phraseUl.appendChild(letterLi);
         };

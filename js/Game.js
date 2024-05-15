@@ -94,12 +94,12 @@ gameOver(gameWon) {
     
     const gameOverMsg = document.querySelector('#game-over-message');
     if(gameWon) {
-        gameOverMsg.textContent = 'Congrats - you did it! Try another one?';
+        gameOverMsg.textContent = 'Congratulations - you won!';
         overlayDiv.classList.remove('start');
         overlayDiv.classList.remove('lose');
         overlayDiv.classList.add('win');
     } else {
-        gameOverMsg.textContent = 'Sorry - you ran out of lives. Try again next time!';
+        gameOverMsg.textContent = 'Sorry - you lost - Try again next time!';
         overlayDiv.classList.remove('start');
         overlayDiv.classList.remove('win');
         overlayDiv.classList.add('lose');
