@@ -135,6 +135,7 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  transform: scale(1.1);
 }
 
 .wrong {
