@@ -85,3 +85,22 @@ checkForWin() {
     const hiddenLetters = document.querySelectorAll('li.hide');
     return hiddenLetters.length === 0;
 };
+
+// Method to display game over message
+
+gameOver(gameWon) {
+    const overlayDiv = document.querySelector('#overlay');
+    overlayDiv.style.display = '';
+    
+    const gameOverMsg = document.querySelector('#game-over-message');
+    if(gameWon) {
+        gameOverMsg.textContent = 'Congrats - you did it! Try another one?';
+        overlayDiv.classList.remove('start');
+        overlayDiv.classList.remove('lose');
+        overlayDiv.classList.add('win');
+    } else {
+        gameOverMsg.textContent = 'Sorry - you ran out of lives. Try again next time!';
+        overlayDiv.classList.remove('start');
+        overlayDiv.classList.remove('win');
+        overlayDiv.classList.add('lose');
+    };
