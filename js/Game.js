@@ -23,7 +23,7 @@ class Game {
     console.log('Phrases array:', phrases);
 
 // Creates an array of Phrase objects using map function.
-    const phrasesArray = phraseStrings.map(string => new Phrase(string));
+    const phrasesArray = phrases.map(string => new Phrase(string));
         return phrasesArray;
       };
 
@@ -104,3 +104,26 @@ gameOver(gameWon) {
         overlayDiv.classList.remove('win');
         overlayDiv.classList.add('lose');
     };
+
+    // Resets the game board for the next game
+    const phraseLis = document.querySelectorAll('#phrase li');
+        phraseLis.forEach(li => {
+            li.remove();
+        });
+
+        // Resets the onscreen keyboard
+        const keyboardButtons = document.querySelectorAll('#qwerty button');
+        keyboardButtons.forEach(button => {
+            button.disabled = false;
+            button.classList.remove('chosen');
+            button.classList.remove('wrong');
+            button.classList.add('key');
+        });
+
+        // Resets the hearts
+        const hearts = document.querySelectorAll('.tries img');
+        hearts.forEach(heart => {
+            heart.src = 'images/liveHeart.png';
+        });
+    };
+ };

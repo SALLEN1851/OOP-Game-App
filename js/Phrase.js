@@ -57,7 +57,6 @@ class Phrase {
             matchedLi.classList.remove('hide');
             matchedLi.classList.add('show');
     
-            console.log('After update:', matchedLi.className);
         };
     };
 }; 

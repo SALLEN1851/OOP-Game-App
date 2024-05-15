@@ -3,8 +3,8 @@
  * app.js */
 
 let game;
-const startGameButton = document.getElementById('#btn__reset');
-const keyboardDiv = document.getElementById('#qwerty');
+const startGameButton = document.querySelector('#btn__reset');
+const keyboardDiv = document.querySelector('#qwerty');
 const keysArray = document.querySelectorAll('.key');
 const overlayDiv = document.querySelector('#overlay');
 
@@ -22,6 +22,7 @@ const handleInteraction = (target) => {
 
 // Adds a event listener to the "Start Game" button when clicked
 startGameButton.addEventListener('click', startGame);
+console.log('Start Game button:', startGameButton);
 
 
 // Adds click event listerners to each of the onscreen keyboard buttons
@@ -33,11 +34,11 @@ keyboardDiv.addEventListener('click', (e) => {
 
 
 // Adds keyup event listener to the physical keyboard
-document.addEventListerner('keyup', (e) => {
+document.addEventListener('keyup', (e) => {
     // allows use of physical keyboard to interact with the game
     if (overlayDiv.style.display === 'none') {
         keysArray.forEach((key) => { 
-            if (e.key === key.textContent) {
+            if (key.textContent === e.key) {
                 handleInteraction(key);
             }           
         });
