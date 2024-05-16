@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   display: flex;
   height: 100vh;
+  background-image: linear-gradient(to bottom, gray, white);
 }
 
 li, ol, ul {
@@ -124,6 +125,30 @@ button {
 
 
 /* Keyboard */
+
+@keyframes colorScaleAnimation {
+  from {
+      background-color: gray;
+      transform: scale(1);
+  }
+  to {
+      background-color: blueviolet;
+      transform: scale(1.2);
+  }
+}
+
+button:hover {
+  animation-name: colorScaleAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; 
+}
+
+
+.key {
+  box-shadow: #37474F 2px 2px 5px;
+}
+
 
 .keyrow {
   display: flex;
