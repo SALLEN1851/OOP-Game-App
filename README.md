@@ -9,7 +9,7 @@
 To play Phrase Hunter:
 
 1. **Launch the Game:**
-    [text](https://sallen1851.github.io/OOP-Game-App/)
+    [click to play now](https://sallen1851.github.io/OOP-Game-App/)
 
 2. **Game Rules:**
    - The game randomly selects a phrase which is hidden from the player.
