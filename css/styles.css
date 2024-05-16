@@ -228,3 +228,74 @@ button:hover {
 .lose a {
   color: var(--color-lose);
 }
+
+/* Breakpoints for Mobile Devices */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .letter, .show {
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+  }
+
+  .btn__reset {
+    width: 150px;
+    font-size: 16px;
+  }
+
+  .main-container {
+    max-height: none;
+    padding: 10px;
+  }
+
+  button {
+    padding: .4rem .8rem;
+    font-size: 16px;
+  }
+
+  #btn__reset {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .letter, .show {
+    height: 40px;
+    width: 40px;
+    font-size: 14px;
+  }
+
+  .btn__reset {
+    width: 120px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: .3rem .6rem;
+    font-size: 14px;
+  }
+
+  #btn__reset {
+    width: 120px;
+  }
+
+  .main-container {
+    max-height: none;
+    padding: 5px;
+  }
+}
